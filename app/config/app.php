@@ -12,9 +12,8 @@ return array(
 	| application. If disabled, a simple generic error page is shown.
 	|
 	*/
-
 	'debug' => true,
-
+	
 	/*
 	|--------------------------------------------------------------------------
 	| Application URL
@@ -26,7 +25,7 @@ return array(
 	|
 	*/
 
-	'url' => 'http://localhost',
+	'url' => 'http://api.ice.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -65,7 +64,7 @@ return array(
 	|
 	*/
 
-	'key' => 'YourSecretKey!!!',
+	'key' => 'lsFVv6RNBBKcpfLcFeLUiYaqMqFQcG96',
 
 	/*
 	|--------------------------------------------------------------------------

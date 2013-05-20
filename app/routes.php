@@ -1,17 +1,15 @@
-<?php
+<?php //Testlink for terminal: curl --user peb7268:testpass http://api.ice.com/index.php/authtest
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the Closure to execute when that URI is requested.
-|
-*/
-
-Route::get('/', function()
+Route::any('/', function()
 {
-	return View::make('hello');
+	$message = array('message' => 'Default Route');
+	return View::make('hello', $message);
+});
+
+Route::any('/login', function(){
+	return View::make('login');
+});
+
+Route::group(array('prefix' => 'api/v1', 'before' => 'apiauth'), function(){
+	Route::resource('url', 'UrlController');
 });
